@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Scope;
 public interface ProxyI {
 
     @Scope(value = "singleton")
-    void searchSomeOne();
+    String searchSomeOne();
 
 }
