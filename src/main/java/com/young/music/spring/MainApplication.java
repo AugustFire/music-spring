@@ -5,6 +5,7 @@ import com.young.music.spring.config.AopConfig;
 import com.young.music.spring.config.BeanLifeCycleConfig;
 import com.young.music.spring.config.JavaConfig;
 import com.young.music.spring.config.TxConfig;
+import com.young.music.spring.config.importaware.ConfigurationOne;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -39,6 +40,10 @@ public class MainApplication {
         System.out.println(helloFactoryBean.getClass());
     }
 
+    @Test
+    public void importAwareTest() {
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(ConfigurationOne.class);
+    }
 
     /**
      * 测试Bean的生命周期
@@ -86,7 +91,11 @@ public class MainApplication {
     @Test
     public void s() {
         System.out.println(System.currentTimeMillis());
-        //FastJson
-        //
+        String as = null;
+        System.out.println(as.toString());
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i+"de");
+        }
+
     }
 }
