@@ -1,5 +1,6 @@
 package com.young.music.spring.config;
 
+import com.young.music.spring.bean.A;
 import com.young.music.spring.bean.LogAspect;
 import com.young.music.spring.bean.MathCal;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @EnableAspectJAutoProxy
-@Import({LogAspect.class, MathCal.class})
+@Import({LogAspect.class, MathCal.class, A.class})
 public class AopConfig {
 
 }
