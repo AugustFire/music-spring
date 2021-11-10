@@ -65,8 +65,10 @@ public class MainApplication {
     @Test
     public void aopTest() {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AopConfig.class);
-        // MathCalI mathCal = ac.getBean(MathCalI.class);
-        // int div = mathCal.div(1, 1);
+        MathCalI mathCal = ac.getBean(MathCalI.class);
+
+        int div = mathCal.div(1, 1);
+
         // System.out.println(div);
         // A bean = ac.getBean(A.class);
         // MathCalI bean1 = ac.getBean(MathCalI.class);

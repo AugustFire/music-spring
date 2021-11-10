@@ -6,6 +6,7 @@ import com.young.music.spring.bean.MathCal;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * @author yzx
@@ -13,7 +14,8 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @EnableAspectJAutoProxy
-@Import({LogAspect.class, MathCal.class, A.class})
+// @EnableAsync
+@Import({LogAspect.class, MathCal.class/*,A.class*/})
 public class AopConfig {
 
 }

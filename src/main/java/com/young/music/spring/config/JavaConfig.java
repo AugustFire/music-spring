@@ -1,6 +1,7 @@
 package com.young.music.spring.config;
 
 import com.young.music.spring.bean.Person;
+import com.young.music.spring.config.importaware.EnableSomeConfiguration;
 import org.springframework.context.annotation.*;
 
 /**
